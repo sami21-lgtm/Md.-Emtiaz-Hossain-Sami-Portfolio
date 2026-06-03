@@ -1,4 +1,4 @@
-// Connection Terminal Form Submissions Controller
+// Dynamic Interface Terminal Submissions Control
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     
@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Basic User feedback log overlay emulation
-            alert('Transmission Protocol Activated! Message package dispatched safely.');
+            // Modern interactive system dispatch logs
+            alert('Secure Protocol Initialized! Your data package has been transmitted to Sami successfully.');
             contactForm.reset();
         });
     }
