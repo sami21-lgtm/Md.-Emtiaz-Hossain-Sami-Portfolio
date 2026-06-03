@@ -1,32 +1,57 @@
-/* Custom UI Core Stylesheet Platform */
+/* Premium Glassmorphic Layout Base */
 .glassmorphic-layer {
-    background: rgba(10, 5, 5, 0.6);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(10, 6, 9, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* Background Cyber Mesh System Effect */
+/* Background Animated Cyber Matrix Grid */
 .interface-system-mesh {
-    background-color: #050202;
-    background-image: linear-gradient(to right, rgba(229, 9, 20, 0.04) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(229, 9, 20, 0.04) 1px, transparent 1px);
+    background-color: #030102;
+    background-image: linear-gradient(to right, rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(244, 63, 94, 0.04) 1px, transparent 1px);
     background-size: 40px 40px;
 }
 
-/* Hover Interactive Components */
+/* Custom Multi-Color Animations */
+@keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+}
+
+@keyframes pulse-fast {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.08); }
+}
+.custom-pulse-fast {
+    animation: pulse-fast 6s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.2; transform: scale(1.1); }
+    50% { opacity: 0.5; transform: scale(0.95); }
+}
+.custom-pulse-slow {
+    animation: pulse-slow 10s ease-in-out infinite;
+}
+
+/* Hover Interactive Matrix Components */
 .app-matrix-element {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    background: rgba(15, 10, 10, 0.5);
-    border: 1px solid rgba(229, 9, 20, 0.1);
+    background: rgba(10, 6, 9, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .app-matrix-element:hover {
-    border-color: rgba(229, 9, 20, 0.5);
-    box-shadow: 0 0 35px rgba(229, 9, 20, 0.25);
-    transform: translateY(-4px);
-    background: rgba(229, 9, 20, 0.04);
+    border-color: rgba(6, 182, 212, 0.5);
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.25);
+    transform: translateY(-5px);
+    background: rgba(6, 182, 212, 0.03);
 }
