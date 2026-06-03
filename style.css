@@ -1,0 +1,32 @@
+/* Custom UI Core Stylesheet Platform */
+.glassmorphic-layer {
+    background: rgba(10, 5, 5, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Background Cyber Mesh System Effect */
+.interface-system-mesh {
+    background-color: #050202;
+    background-image: linear-gradient(to right, rgba(229, 9, 20, 0.04) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(229, 9, 20, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Hover Interactive Components */
+.app-matrix-element {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(15, 10, 10, 0.5);
+    border: 1px solid rgba(229, 9, 20, 0.1);
+}
+
+.app-matrix-element:hover {
+    border-color: rgba(229, 9, 20, 0.5);
+    box-shadow: 0 0 35px rgba(229, 9, 20, 0.25);
+    transform: translateY(-4px);
+    background: rgba(229, 9, 20, 0.04);
+}
