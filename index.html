@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Emtiaz Hossain Sami — Senior Software Architecture Portfolio</title>
+    <title>SAMI // SYSTEM OVERRIDE PORTFOLIO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Gamer & Sci-Fi Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+                    fontFamily: {
+                        'cyber': ['Orbitron', 'sans-serif'],
+                        'mono-tech': ['Share Tech Mono', 'monospace']
+                    },
                     colors: {
-                        cyberDark: '#020916', 
-                        cardDark: '#0b132b',  
-                        neonCyan: '#00e5ff',
-                        neonPink: '#ff007f'
+                        navyDeep: '#020c1b',      /* Dark Navy Blue Base */
+                        navyCard: '#0a192f',      /* Mid Navy Card Fill */
+                        neonViolet: '#8b5cf6',    /* Gamer Purple Accent */
+                        neonCyan: '#00f0ff',      /* Cyber Cyan Glow */
+                        neonMagenta: '#ff007f'    /* Hot Pink Accent */
                     }
                 }
             }
@@ -25,346 +30,302 @@
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-cyberDark text-white font-inter overflow-x-hidden interface-system-mesh">
-<div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-gradient-to-br from-cyan-500/10 to-transparent blur-[120px] pointer-events-none custom-pulse-fast"></div>
-<div class="absolute top-[40%] right-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-pink-500/10 to-transparent blur-[150px] pointer-events-none custom-pulse-slow"></div>
-<nav class="fixed top-0 left-0 right-0 z-50 bg-black/75 backdrop-blur-xl border-b border-neutral-900/80">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-            <div class="h-11 w-auto overflow-hidden">
-                <img src="Md. EmTIAZ hOSSAIN sAMI LOGO.png" alt="Sami Official Logo" class="h-full object-contain">
-            </div>
+<body class="bg-navyDeep text-slate-100 font-mono-tech overflow-x-hidden interface-grid relative selection:bg-neonCyan selection:text-black">
+
+<!-- Interactive Particle Canvas Layer -->
+<canvas id="gamer-matrix" class="absolute inset-0 pointer-events-none z-0 min-h-full w-full"></canvas>
+
+<!-- Ambient Neon Lighting -->
+<div class="absolute top-0 left-1/4 w-[400px] h-[400px] bg-neonCyan/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-neonViolet/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+<!-- Navigation HUD Panel -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-navyDeep/80 backdrop-blur-md border-b-2 border-neonViolet/30 font-cyber">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <div class="w-3 h-3 bg-neonCyan animate-ping rounded-full"></div>
+            <span class="text-sm font-black tracking-widest text-neonCyan">SAMI_OS // V2.6</span>
         </div>
-        <div class="hidden md:flex items-center gap-8 text-xs font-bold tracking-[0.2em] text-neutral-400">
-            <a href="#home" class="hover:text-cyan-400 transition-colors">DASHBOARD</a>
-            <a href="#about-section" class="hover:text-cyan-400 transition-colors">ABOUT</a>
-            <a href="#my-skills" class="hover:text-cyan-400 transition-colors">SKILLS HUD</a>
-            <a href="#cv-node" class="hover:text-cyan-400 transition-colors">CREDENTIALS</a>
-            <a href="#projects" class="hover:text-cyan-400 transition-colors">PRODUCTIONS</a>
-            <a href="#contact" class="hover:text-cyan-400 transition-colors">CONTACT</a>
+        <div class="hidden lg:flex items-center gap-6 text-[11px] font-bold tracking-widest">
+            <a href="#home" class="text-neonCyan border-b border-neonCyan py-1">[ HOME ]</a>
+            <a href="#about-section" class="hover:text-neonViolet transition-colors">// ABOUT</a>
+            <a href="#my-skills" class="hover:text-neonViolet transition-colors">// SKILLS_HUD</a>
+            <a href="#cv-node" class="hover:text-neonViolet transition-colors">// ARCHIVE</a>
+            <a href="#projects" class="hover:text-neonViolet transition-colors">// MISSIONS</a>
+            <a href="#contact" class="hover:text-neonViolet transition-colors">// CONNECT</a>
         </div>
-        <a href="mailto:samiemtiaz38@gmail.com" class="px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-black tracking-widest uppercase rounded-lg hover:brightness-125 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)]">Mail Terminal</a>
+        <div class="text-xs text-right font-mono-tech text-slate-400 hidden sm:block">
+            SYS_STATUS: <span class="text-green-400">ONLINE</span>
+        </div>
     </div>
 </nav>
 
-<main id="home" class="min-h-screen pt-28 pb-16 flex flex-col items-center justify-center max-w-6xl mx-auto px-4 gap-12">
-    <div class="w-full relative rounded-3xl overflow-hidden border border-neutral-900/60 shadow-2xl bg-gradient-to-b from-neutral-950 via-cardDark to-black p-8 sm:p-14 relative group">
-        <div class="flex flex-col items-center border-b border-neutral-900 pb-10 mb-10 relative z-10">
-            <div class="relative mb-6">
-                <div class="absolute inset-0 bg-gradient-to-tr from-cyan-400 via-purple-500 to-pink-500 rounded-full blur opacity-60 animate-spin-slow"></div>
-                <div class="w-36 h-36 rounded-full overflow-hidden border-2 border-neutral-950 relative z-10">
-                    <img src="about-photo.jpg.jpg" alt="Sami Profile" class="w-full h-full object-cover">
+<!-- Main Mainframe Terminal Dashboard -->
+<main id="home" class="min-h-screen pt-24 pb-12 flex flex-col items-center justify-center max-w-6xl mx-auto px-4 relative z-10">
+    
+    <!-- Central Command Station Deck -->
+    <div class="w-full bg-navyCard/90 border-2 border-neonViolet/40 rounded-none p-6 sm:p-10 shadow-[0_0_30px_rgba(139,92,246,0.15)] relative">
+        
+        <!-- Tactical Layout Overlays -->
+        <div class="absolute top-0 left-0 bg-neonViolet text-black font-cyber text-[10px] font-black px-3 py-1 uppercase">SYSTEM LOADED</div>
+        <div class="absolute bottom-0 right-0 text-neonCyan/30 text-[10px] p-2 font-mono-tech">45.89.110.X</div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-center border-b border-slate-800 pb-8 mb-8">
+            <!-- Avatar Display Node -->
+            <div class="lg:col-span-4 flex flex-col items-center">
+                <div class="relative group cursor-crosshair">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-neonCyan via-neonViolet to-neonMagenta rounded-none blur opacity-40 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="w-44 h-44 bg-black border-2 border-neonCyan p-1 relative z-10">
+                        <img src="about-photo.jpg.jpg" alt="Sami Profile" class="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-300">
+                        <!-- Holographic Scanline Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-neonCyan/5 to-transparent bg-[length:100%_4px] pointer-events-none"></div>
+                    </div>
+                </div>
+                
+                <!-- Communication Matrix Sub-links -->
+                <div class="flex gap-2 mt-4">
+                    <a href="https://github.com/sami21-lgtm" target="_blank" class="p-2 bg-black border border-neonCyan text-neonCyan hover:bg-neonCyan hover:text-black transition-all">
+                        <span class="iconify text-lg" data-icon="simple-icons:github"></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/emtiaz-hossain-6b4416340/" target="_blank" class="p-2 bg-black border border-neonViolet text-neonViolet hover:bg-neonViolet hover:text-black transition-all">
+                        <span class="iconify text-lg" data-icon="simple-icons:linkedin"></span>
+                    </a>
+                    <a href="https://www.facebook.com/emtiaz.hossain.2478" target="_blank" class="p-2 bg-black border border-slate-700 text-slate-400 hover:border-white hover:text-white transition-all">
+                        <span class="iconify text-lg" data-icon="simple-icons:facebook"></span>
+                    </a>
                 </div>
             </div>
-            <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500 uppercase text-center drop-shadow-sm">
-                MD. EMTIAZ HOSSAIN SAMI
-            </h1>
-            <p class="text-xs sm:text-sm font-bold tracking-[0.5em] text-neutral-400 uppercase mt-4 text-center border-y border-neutral-900/60 py-2 px-4">
-                Software Engineering Student & Front-End Architecture Engineer
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 mt-8">
-                <a href="https://www.facebook.com/emtiaz.hossain.2478" target="_blank" class="p-3 bg-neutral-900/50 border border-neutral-800 rounded-xl text-neutral-400 hover:text-blue-500 hover:border-blue-600/50 hover:bg-blue-950/10 transition-all transform hover:-translate-y-1">
-                    <span class="iconify text-2xl" data-icon="simple-icons:facebook"></span>
-                </a>
-                <a href="https://www.linkedin.com/in/emtiaz-hossain-6b4416340/" target="_blank" class="p-3 bg-neutral-900/50 border border-neutral-800 rounded-xl text-neutral-400 hover:text-cyan-400 hover:border-cyan-500/50 hover:bg-cyan-950/10 transition-all transform hover:-translate-y-1">
-                    <span class="iconify text-2xl" data-icon="simple-icons:linkedin"></span>
-                </a>
-                <a href="https://github.com/sami21-lgtm" target="_blank" class="p-3 bg-neutral-900/50 border border-neutral-800 rounded-xl text-neutral-400 hover:text-white hover:border-neutral-700 hover:bg-neutral-800/20 transition-all transform hover:-translate-y-1">
-                    <span class="iconify text-2xl" data-icon="simple-icons:github"></span>
-                </a>
-                <a href="https://instagram.com/" target="_blank" class="p-3 bg-neutral-900/50 border border-neutral-800 rounded-xl text-neutral-400 hover:text-pink-500 hover:border-pink-500/50 hover:bg-pink-950/10 transition-all transform hover:-translate-y-1">
-                    <span class="iconify text-2xl" data-icon="simple-icons:instagram"></span>
-                </a>
-                <a href="https://x.com/" target="_blank" class="p-3 bg-neutral-900/50 border border-neutral-800 rounded-xl text-neutral-400 hover:text-white hover:border-neutral-700 transition-all transform hover:-translate-y-1">
-                    <span class="iconify text-2xl" data-icon="simple-icons:x"></span>
-                </a>
+
+            <!-- Identity Core Headers -->
+            <div class="lg:col-span-8 text-center lg:text-left">
+                <span class="text-xs font-cyber tracking-[0.4em] text-neonMagenta font-bold block mb-2">// FRONT-END ARCHITECT ENGINEER</span>
+                <h1 class="text-3xl sm:text-5xl font-cyber font-black tracking-tighter uppercase text-white drop-shadow-[0_0_15px_rgba(0,240,255,0.4)]">
+                    MD. EMTIAZ HOSSAIN SAMI
+                </h1>
+                
+                <p class="mt-4 text-sm text-slate-400 font-mono-tech max-w-xl leading-relaxed">
+                    Software Engineering student at Daffodil International University [DIU]. Specializing in structured object-oriented logic frameworks and high-fidelity tech user interfaces. Actively tracking robotics and front-end design mechanics.
+                </p>
+
+                <!-- RPG Stat Meters -->
+                <div class="mt-6 grid grid-cols-2 gap-4 max-w-md">
+                    <div class="bg-black/50 p-3 border-l-2 border-neonCyan">
+                        <div class="text-[10px] font-cyber text-slate-400">ENJOY METER</div>
+                        <div class="flex items-center gap-2 mt-1">
+                            <div class="flex-1 bg-slate-900 h-2.5 p-0.5 border border-slate-700">
+                                <div class="bg-neonCyan h-full shadow-[0_0_10px_#00f0ff]" style="width: 72%"></div>
+                            </div>
+                            <span class="text-xs text-neonCyan font-cyber">72%</span>
+                        </div>
+                    </div>
+                    <div class="bg-black/50 p-3 border-l-2 border-neonMagenta">
+                        <div class="text-[10px] font-cyber text-slate-400">CLASS METER</div>
+                        <div class="flex items-center gap-2 mt-1">
+                            <div class="flex-1 bg-slate-900 h-2.5 p-0.5 border border-slate-700">
+                                <div class="bg-neonMagenta h-full shadow-[0_0_10px_#ff007f]" style="width: 82%"></div>
+                            </div>
+                            <span class="text-xs text-neonMagenta font-cyber">82%</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="grid sm:grid-cols-3 gap-12 items-center bg-neutral-950/40 backdrop-blur-md p-10 rounded-2xl border border-neutral-900/80 relative z-10">
-            <div class="flex flex-col items-center">
-                <span class="text-cyan-400 font-black tracking-widest text-xs uppercase mb-4">ENJOY METER</span>
-                <div class="w-12 bg-neutral-900 h-40 rounded-t relative overflow-hidden flex items-end">
-                    <div class="w-full bg-gradient-to-t from-cyan-600 to-cyan-400 h-[72%]"></div>
-                </div>
-                <div class="mt-4 flex items-center justify-center w-14 h-14 rounded-full border-4 border-cyan-400 text-xs font-black text-cyan-400">72%</div>
+
+        <!-- Achievement Status Grid -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-6 text-center my-6 bg-black/40 p-4 border border-slate-800">
+            <div class="p-2">
+                <div class="text-2xl sm:text-3xl font-cyber font-bold text-neonCyan">01+</div>
+                <div class="text-[10px] uppercase text-slate-400 tracking-wider">YEARS_EXP</div>
             </div>
-            <div class="space-y-4 font-semibold text-neutral-400 py-2 text-xs sm:text-sm">
-                <div class="flex items-center gap-4 group/item">
-                    <span class="iconify text-cyan-400 text-xl group-hover/item:scale-110 transition-transform" data-icon="lucide:check-circle"></span>
-                    <span class="group-hover/item:text-neutral-200 transition-colors">Pace decreasing</span>
-                </div>
-                <div class="flex items-center gap-4 group/item">
-                    <span class="iconify text-purple-400 text-xl group-hover/item:scale-110 transition-transform" data-icon="lucide:check-circle"></span>
-                    <span class="group-hover/item:text-neutral-200 transition-colors">Acting very natural</span>
-                </div>
-                <div class="flex items-center gap-4 group/item">
-                    <span class="iconify text-pink-400 text-xl group-hover/item:scale-110 transition-transform" data-icon="lucide:check-circle"></span>
-                    <span class="group-hover/item:text-neutral-200 transition-colors">Cinematography top notch</span>
-                </div>
-                <div class="flex items-center gap-4 group/item">
-                    <span class="iconify text-cyan-400 text-xl group-hover/item:scale-110 transition-transform" data-icon="lucide:check-circle"></span>
-                    <span class="group-hover/item:text-neutral-200 transition-colors">Enjoyable BGM</span>
-                </div>
+            <div class="p-2 border-x border-slate-800">
+                <div class="text-2xl sm:text-3xl font-cyber font-bold text-neonViolet animate-pulse">70+</div>
+                <div class="text-[10px] uppercase text-slate-400 tracking-wider">COMPLETED_MISSIONS</div>
             </div>
-            <div class="flex flex-col items-center">
-                <span class="text-pink-500 font-black tracking-widest text-xs uppercase mb-4">CLASS METER</span>
-                <div class="w-12 bg-neutral-900 h-40 rounded-t relative overflow-hidden flex items-end">
-                    <div class="w-full bg-gradient-to-t from-pink-600 to-pink-500 h-[82%]"></div>
-                </div>
-                <div class="mt-4 flex items-center justify-center w-14 h-14 rounded-full border-4 border-pink-500 text-xs font-black text-pink-500">82%</div>
+            <div class="p-2">
+                <div class="text-2xl sm:text-3xl font-cyber font-bold text-white">12+</div>
+                <div class="text-[10px] uppercase text-slate-400 tracking-wider">TECH_STACK</div>
             </div>
         </div>
-        <div class="grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto my-12 border-y border-neutral-900 py-6 text-center relative z-10">
-            <div>
-                <div class="text-3xl sm:text-4xl font-black text-white">1+</div>
-                <div class="text-xs uppercase font-bold tracking-widest text-neutral-500 mt-1">Years Experience</div>
-            </div>
-            <div class="border-x border-neutral-900">
-                <div class="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-400 animate-pulse">70+</div>
-                <div class="text-xs uppercase font-bold tracking-widest text-neutral-500 mt-1">Projects Done</div>
-            </div>
-            <div>
-                <div class="text-3xl sm:text-4xl font-black text-white">12+</div>
-                <div class="text-xs uppercase font-bold tracking-widest text-neutral-500 mt-1">Technologies</div>
-            </div>
-        </div>
-        <div class="flex flex-wrap justify-center gap-6 relative z-10">
-            <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-pink-500 hover:to-purple-600 text-white font-bold rounded-lg text-xs tracking-widest uppercase shadow-xl transition-all duration-300">View Project Repos</a>
-            <a href="https://sami21-lgtm.github.io/Own-portal/" target="_blank" class="px-8 py-4 border border-neutral-800 text-neutral-400 font-semibold rounded-lg text-xs tracking-widest uppercase hover:border-cyan-400 hover:text-white transition-all">Own Portal URL</a>
+
+        <!-- Operational Action Links -->
+        <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+            <a href="#projects" class="px-6 py-3 bg-neonViolet text-black font-cyber text-xs font-black tracking-widest uppercase hover:bg-neonCyan shadow-[0_0_15px_rgba(139,92,246,0.4)] hover:shadow-[0_0_15px_rgba(0,240,255,0.4)] transition-all">
+                LAUNCH_MISSIONS_LIST
+            </a>
+            <a href="https://sami21-lgtm.github.io/Own-portal/" target="_blank" class="px-6 py-3 border border-neonCyan text-neonCyan font-cyber text-xs font-bold tracking-widest uppercase hover:bg-neonCyan/10 transition-all">
+                ACCESS_PORTAL_CORE //
+            </a>
         </div>
     </div>
 </main>
 
-<section id="about-section" class="py-16 border-t border-neutral-900/80">
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="glassmorphic-layer p-10 rounded-3xl border border-neutral-900 space-y-6">
-            <div class="border-b border-neutral-900 pb-4">
-                <span class="text-xs font-bold text-cyan-400 tracking-[0.3em] uppercase">IDENTITY DEPLOYMENT</span>
-                <h2 class="text-3xl font-black mt-1">About Me</h2>
-            </div>
-            <p class="text-base sm:text-lg text-neutral-300 leading-relaxed font-light">
-                I am <strong class="text-white">MD. Emtiaz Hossain Sami</strong>, a Software Engineering student at <span class="text-white">Daffodil International University</span> with a passion for building functional and aesthetic digital experiences[cite: 554].
-                As a front-end developer, I specialize in <span class="text-cyan-400 font-semibold">Glassmorphism design</span> and responsive web interfaces[cite: 555].
+<!-- Mission Log Section (About) -->
+<section id="about-section" class="py-12 max-w-6xl mx-auto px-4 relative z-10">
+    <div class="bg-navyCard border border-slate-800 p-6 sm:p-8 relative">
+        <div class="border-b border-slate-800 pb-3 mb-4 flex items-center gap-2">
+            <span class="iconify text-xl text-neonViolet" data-icon="lucide:terminal"></span>
+            <h2 class="text-lg font-cyber font-bold tracking-wider text-white">MISSION_LOG // ABOUT_SAMI</h2>
+        </div>
+        <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
+            <p>
+                > I am <strong class="text-neonCyan">Md. Emtiaz Hossain Sami</strong>, a dedicated Software Engineering student driven by a profound focus on modern client-side software architectures and front-end environments. 
             </p>
-            <p class="text-base sm:text-lg text-neutral-300 leading-relaxed font-light">
-                Beyond the screen, I am a dedicated robotics enthusiast, having successfully developed hardware prototypes like a <span class="text-purple-400 font-semibold">Human Following Robot</span>[cite: 558].
-                I balance my technical pursuits with a commitment to fitness and bodybuilding, always striving for growth in both code and life[cite: 559].
+            <p>
+                > Outside the development sandbox, I design and construct physical hardware units, notably having built a functional <span class="text-neonMagenta font-bold">Human Following Robot</span> prototype. I actively blend my computer science endeavors with personal fitness and bodybuilding goals.
             </p>
         </div>
     </div>
 </section>
 
-<section id="my-skills" class="py-20 bg-neutral-950/20 border-t border-neutral-900/80">
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="glassmorphic-layer p-10 rounded-3xl border border-neutral-900 space-y-8">
-            <div class="border-b border-neutral-900 pb-4">
-                <span class="text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-400 tracking-[0.3em] uppercase">ALGORITHMIC HUD</span>
-                <h2 class="text-3xl font-black mt-1">My Skills & Programming Hub</h2>
+<!-- Algorithmic HUD Panel (Skills) -->
+<section id="my-skills" class="py-12 max-w-6xl mx-auto px-4 relative z-10">
+    <div class="bg-navyCard border border-slate-800 p-6 sm:p-8">
+        <div class="border-b border-slate-800 pb-3 mb-6">
+            <h2 class="text-lg font-cyber font-bold text-white tracking-widest">// SKILLS_&_ALGORITHMIC_HUD</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <a href="https://codeforces.com/profile/samiemtiaz008" target="_blank" class="p-4 bg-black border border-red-900/40 hover:border-red-500 transition-colors flex items-center justify-between group">
+                <div class="flex items-center gap-3">
+                    <span class="iconify text-2xl text-red-500" data-icon="simple-icons:codeforces"></span>
+                    <span class="font-cyber text-xs tracking-wider group-hover:text-red-400">CODEFORCES_NODE</span>
+                </div>
+                <span class="text-xs text-slate-500 font-mono-tech">@samiemtiaz008</span>
+            </a>
+            <a href="https://www.beecrowd.com.br/judge/en/profile/861747" target="_blank" class="p-4 bg-black border border-cyan-950/40 hover:border-neonCyan transition-colors flex items-center justify-between group">
+                <div class="flex items-center gap-3">
+                    <span class="iconify text-2xl text-neonCyan" data-icon="lucide:code-2"></span>
+                    <span class="font-cyber text-xs tracking-wider group-hover:text-neonCyan">BEECROWD_JUDGE</span>
+                </div>
+                <span class="text-xs text-slate-500 font-mono-tech">ACTIVE_SOLVER</span>
+            </a>
+        </div>
+
+        <div class="space-y-2">
+            <div class="text-xs font-cyber text-slate-400 mb-2">// MAPPED_TECH_INVENTORY:</div>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-black border border-neonViolet text-xs text-neonViolet">C++ CORE</span>
+                <span class="px-3 py-1 bg-black border border-neonCyan text-xs text-neonCyan">WEB_DEV_FRAMEWORKS</span>
+                <span class="px-3 py-1 bg-black border border-slate-700 text-xs text-slate-300">HTML5 / CSS_GRID</span>
+                <span class="px-3 py-1 bg-black border border-neonMagenta text-xs text-neonMagenta">ROBOTICS_PROTOTYPING</span>
+                <span class="px-3 py-1 bg-black border border-slate-700 text-xs text-slate-300">UI_UX_FIGMA</span>
+                <span class="px-3 py-1 bg-black border border-slate-700 text-xs text-slate-300">GIT_INFRASTRUCTURE</span>
             </div>
-            <div class="grid md:grid-cols-2 gap-6">
-                <a href="https://codeforces.com/profile/samiemtiaz008" target="_blank" class="app-matrix-element p-6 rounded-2xl flex items-center justify-between group">
-                    <div class="flex items-center gap-4">
-                        <span class="iconify text-3xl text-red-500 animate-pulse" data-icon="simple-icons:codeforces"></span>
-                        <div>
-                            <h4 class="text-base font-bold text-white group-hover:text-cyan-400 transition-colors">Codeforces Profile</h4>
-                            <p class="text-xs text-neutral-500 font-mono">@samiemtiaz008</p>
-                        </div>
-                    </div>
-                    <span class="iconify text-xl text-neutral-600 group-hover:text-white transition-all transform group-hover:translate-x-1" data-icon="lucide:arrow-right"></span>
-                </a>
-                <a href="https://www.beecrowd.com.br/judge/en/profile/861747" target="_blank" class="app-matrix-element p-6 rounded-2xl flex items-center justify-between group">
-                    <div class="flex items-center gap-4">
-                        <span class="iconify text-3xl text-cyan-400" data-icon="lucide:code-2"></span>
-                        <div>
-                            <h4 class="text-base font-bold text-white group-hover:text-pink-500 transition-colors">Beecrowd Judge</h4>
-                            <p class="text-xs text-neutral-500 font-mono">Problem Solving Framework</p>
-                        </div>
-                    </div>
-                    <span class="iconify text-xl text-neutral-600 group-hover:text-white transition-all transform group-hover:translate-x-1" data-icon="lucide:arrow-right"></span>
-                </a>
+        </div>
+    </div>
+</section>
+
+<!-- Secure Credentials Archive (CV & Education) -->
+<section id="cv-node" class="py-12 max-w-6xl mx-auto px-4 relative z-10">
+    <div class="grid lg:grid-cols-3 gap-6 items-start">
+        <div class="bg-black/40 border border-slate-800 p-6 flex flex-col items-center justify-center text-center">
+            <div class="w-32 h-40 bg-navyCard border border-slate-700 p-1 mb-4">
+                <img src="Md.Emtiaz Hossain Sami.jpg" alt="Formal Headshot" class="w-full h-full object-cover filter contrast-110">
             </div>
-            <div class="pt-4">
-                <h3 class="text-xs font-bold text-neutral-400 tracking-widest uppercase mb-4 flex items-center gap-2">
-                    <span class="iconify text-cyan-400" data-icon="lucide:cpu"></span> Mapped Stack Technologies:
-                </h3>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-neutral-300 font-medium rounded-lg hover:border-cyan-500 transition-colors">C++ Programming</span>
-                    <span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-cyan-400 font-medium rounded-lg hover:border-cyan-500 transition-colors">Web Development</span>
-                    <span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-neutral-300 font-medium rounded-lg hover:border-cyan-500 transition-colors">C Language Architecture</span>
-                    <span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-neutral-300 font-medium rounded-lg hover:border-cyan-500 transition-colors">HTML & CSS Grid</span>
-                    <span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-purple-400 font-medium rounded-lg hover:border-cyan-500 transition-colors">UI/UX Design (Figma)</span>
-                    <span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-neutral-300 font-medium rounded-lg hover:border-cyan-500 transition-colors">GitHub Infrastructure</span>
-                    <span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-pink-400 font-medium rounded-lg hover:border-cyan-500 transition-colors">Robotics Prototypes</span>
+            <a href="Emtiaz_Sami (1) (2) (1).pdf" download class="w-full py-2 bg-neonCyan text-black font-cyber text-xs font-black tracking-widest text-center hover:bg-white transition-colors">
+                DOWNLOAD_CV.RAW
+            </a>
+        </div>
+
+        <div class="lg:col-span-2 bg-navyCard border border-slate-800 p-6">
+            <div class="font-cyber text-xs text-neonViolet mb-4">// ACADEMIC_CHRONOLOGY</div>
+            <div class="space-y-4 font-mono-tech text-sm border-l border-neonViolet/30 pl-4">
+                <div>
+                    <div class="text-neonCyan text-xs">[2024 — 2028]</div>
+                    <div class="text-white font-bold">B.Sc in Software Engineering</div>
+                    <div class="text-slate-400 text-xs">Daffodil International University</div>
+                </div>
+                <div>
+                    <div class="text-slate-500 text-xs">[2022 — 2023]</div>
+                    <div class="text-slate-300">Higher Secondary Certificate (HSC)</div>
+                    <div class="text-slate-400 text-xs">Dhaka City College</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="cv-node" class="py-24 bg-gradient-to-b from-cyberDark to-black border-t border-neutral-900/80">
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="mb-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 text-center sm:text-left border-b border-neutral-900 pb-8">
+<!-- Deployed Missions Deck (Projects Grid) -->
+<section id="projects" class="py-12 max-w-6xl mx-auto px-4 relative z-10">
+    <div class="mb-6">
+        <span class="text-xs font-cyber text-neonMagenta font-bold">// SECURE_ARCHIVE_DATA</span>
+        <h2 class="text-xl font-cyber font-black text-white tracking-widest">DEPLOYED_MISSIONS</h2>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Mission Card 01 -->
+        <div class="bg-navyCard border border-slate-800 p-4 hover:border-neonCyan transition-all group flex flex-col justify-between">
             <div>
-                <span class="text-xs font-bold text-pink-500 tracking-[.3em] uppercase">VERIFIED ACCESS NODE</span>
-                <h2 class="text-3xl font-black mt-1">Curriculum Vitae Repository</h2>
+                <div class="text-[10px] text-neonViolet font-cyber">MISSION_01 // WEB</div>
+                <h3 class="text-base font-bold text-white mt-1 group-hover:text-neonCyan transition-colors">Hostel Management</h3>
+                <p class="text-xs text-slate-400 mt-2 font-light">Engineered optimized structural data assignment frameworks for allocation logic routing.</p>
             </div>
-            <div class="flex justify-center">
-                <a href="Emtiaz_Sami (1) (2) (1).pdf" download="Md_Emtiaz_Hossain_Sami_CV.pdf" class="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-pink-500 text-white text-xs font-black tracking-widest uppercase rounded-xl hover:scale-105 shadow-xl transition-all transform duration-300">
-                    <span class="iconify text-xl" data-icon="lucide:download-cloud"></span>
-                    Download CV PDF
-                </a>
+            <div class="mt-4 pt-3 border-t border-slate-900 text-right">
+                <a href="https://github.com/sami21-lgtm/Hostel-Management-System" target="_blank" class="text-xs text-neonCyan font-cyber hover:underline">SOURCE_CODE -></a>
             </div>
         </div>
-        <div class="grid lg:grid-cols-12 gap-12 items-start">
-            <div class="lg:col-span-4 flex flex-col items-center">
-                <div class="relative w-full max-w-[260px] aspect-[3/4] rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 shadow-2xl">
-                    <img src="Md.Emtiaz Hoosain Sami.jpg" alt="Formal Photo" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-cyberDark via-transparent to-transparent"></div>
-                </div>
-            </div>
-            <div class="lg:col-span-8 space-y-8">
-                <div class="glassmorphic-layer p-8 rounded-2xl border border-neutral-900">
-                    <h3 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-6 flex items-center gap-2">
-                        <span class="iconify text-lg" data-icon="lucide:graduation-cap"></span> Academic Chronology
-                    </h3>
-                    <div class="space-y-6 border-l-2 border-neutral-900 pl-6 ml-2">
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(6,182,212,1)]"></span>
-                            <div class="flex justify-between text-xs font-mono text-neutral-500 mb-1">
-                                <span>Daffodil International University (DIU)</span>
-                                <span>2024 — 2028</span>
-                            </div>
-                            <h4 class="text-base font-bold text-white">Bachelor's in Software Engineering</h4>
-                        </div>
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-neutral-700"></span>
-                            <div class="flex justify-between text-xs font-mono text-neutral-500 mb-1">
-                                <span>Dhaka City College</span>
-                                <span>2022 — 2023</span>
-                            </div>
-                            <h4 class="text-base font-semibold text-neutral-300">Higher Secondary Certificate (HSC)</h4>
-                        </div>
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-neutral-700"></span>
-                            <div class="flex justify-between text-xs font-mono text-neutral-500 mb-1">
-                                <span>Dhanmondi Govt. Boy's High School</span>
-                                <span>2013 — 2021</span>
-                            </div>
-                            <h4 class="text-base font-semibold text-neutral-300">Secondary School Certificate (SSC)</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="glassmorphic-layer p-8 rounded-2xl border border-neutral-900 space-y-4">
-                    <h3 class="text-xs font-bold tracking-widest text-pink-500 uppercase flex items-center gap-2">
-                        <span class="iconify text-lg" data-icon="lucide:award"></span> Verified Core Credentials
-                    </h3>
-                    <ul class="text-xs sm:text-sm text-neutral-400 space-y-4">
-                        <li class="flex flex-wrap items-center justify-between gap-3 border-b border-neutral-900/40 pb-3">
-                            <span><strong class="text-white">Foundation Of Cybersecurity</strong> (Coursera - 2026)</span>
-                            <a href="https://www.coursera.org/account/accomplishments/certificate/WARAL2XWLWDR" target="_blank" class="text-cyan-400 hover:underline flex items-center gap-0.5 font-mono">Verify <span class="iconify" data-icon="lucide:external-link"></span></a>
-                        </li>
-                        <li class="flex flex-wrap items-center justify-between gap-3 border-b border-neutral-900/40 pb-3">
-                            <span><strong class="text-white">Operating Systems: Becoming a Power User</strong> (Coursera)</span>
-                            <a href="https://www.coursera.org/account/accomplishments/certificate/X9G02061Q3QL" target="_blank" class="text-cyan-400 hover:underline flex items-center gap-0.5 font-mono">Verify <span class="iconify" data-icon="lucide:external-link"></span></a>
-                        </li>
-                        <li class="flex flex-wrap items-center justify-between gap-3">
-                            <span><strong class="text-white">C Programming Language Layer</strong> (10 Minute School)</span>
-                            <a href="https://10minuteschool.com/certificate/6874c04fcc117" target="_blank" class="text-cyan-400 hover:underline flex items-center gap-0.5 font-mono">Verify <span class="iconify" data-icon="lucide:external-link"></span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="projects" class="py-24 bg-black/40 border-t border-neutral-900/80">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="mb-14">
-            <span class="text-xs font-bold text-cyan-400 tracking-[.3em] uppercase">PRODUCTION MATRIX</span>
-            <h2 class="text-4xl font-black mt-2">Verified Framework Deployments</h2>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="app-matrix-element glassmorphic-layer p-6 rounded-xl flex flex-col justify-between h-76">
-                <div>
-                    <span class="text-xs font-bold text-pink-500 uppercase tracking-widest">Web Application</span>
-                    <h3 class="text-lg font-bold mt-1 text-white">Hostel Management</h3>
-                    <p class="text-neutral-400 text-xs mt-3 font-light leading-relaxed">Allocation logic, management routines and data layouts engineered cleanly[cite: 697].</p>
-                </div>
-                <div class="flex justify-between items-center mt-6">
-                    <span class="text-[10px] font-mono text-neutral-600">REPOSITORY CONFIG</span>
-                    <a href="https://github.com/sami21-lgtm/Hostel-Management-System" target="_blank" class="text-xs font-bold text-cyan-400 hover:underline flex items-center gap-1">Source Link <span class="iconify" data-icon="lucide:external-link"></span></a>
-                </div>
-            </div>
-            <div class="app-matrix-element glassmorphic-layer p-6 rounded-xl flex flex-col justify-between h-76">
-                <div>
-                    <span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">Web Application</span>
-                    <h3 class="text-lg font-bold mt-1 text-white">Hotel Management</h3>
-                    <p class="text-neutral-400 text-xs mt-3 font-light leading-relaxed">Interactive alive reservation room console rendering dashboard layout[cite: 708].</p>
-                </div>
-                <div class="flex justify-between items-center mt-6">
-                    <a href="https://github.com/sami21-lgtm/Hotel-Management-system" target="_blank" class="text-xs text-neutral-500 underline">Source Grid</a>
-                    <a href="https://sami21-lgtm.github.io/Hotel-Management-system/" target="_blank" class="text-xs font-bold text-pink-500 hover:underline flex items-center gap-1">Live Deployment <span class="iconify" data-icon="lucide:play"></span></a>
-                </div>
-            </div>
-            <div class="app-matrix-element glassmorphic-layer p-6 rounded-xl flex flex-col justify-between h-76">
-                <div>
-                    <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Web Application</span>
-                    <h3 class="text-lg font-bold mt-1 text-white">Modern Hospital Setup</h3>
-                    <p class="text-neutral-400 text-xs mt-3 font-light leading-relaxed">Patient registry core data architectures tracking logic environment[cite: 719].</p>
-                </div>
-                <div class="flex justify-between items-center mt-6">
-                    <span class="text-[10px] font-mono text-neutral-600">HEALTH ENVIRONMENT</span>
-                    <a href="https://sami21-lgtm.github.io/modern-hospital-management-system/" target="_blank" class="text-xs font-bold text-cyan-400 hover:underline flex items-center gap-1">Live Deployment <span class="iconify" data-icon="lucide:external-link"></span></a>
-                </div>
-            </div>
-            <div class="app-matrix-element glassmorphic-layer p-6 rounded-xl flex flex-col justify-between h-76">
-                <div>
-                    <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Architecture Hub</span>
-                    <h3 class="text-lg font-bold mt-1 text-white">ADOR Portfolio</h3>
-                    <p class="text-neutral-400 text-xs mt-3 font-light leading-relaxed">Advanced interactive portal framework displaying centralized node configurations.</p>
-                </div>
-                <div class="flex justify-between items-center mt-6">
-                    <span class="text-[10px] font-mono text-neutral-600">PORTAL MATRIX</span>
-                    <a href="https://sami21-lgtm.github.io/ADOR-portfolio/" target="_blank" class="text-xs font-bold text-amber-400 hover:underline flex items-center gap-1">Live Deployment <span class="iconify" data-icon="lucide:external-link"></span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="py-24 border-t border-neutral-900/80">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16">
+        <!-- Mission Card 02 -->
+        <div class="bg-navyCard border border-slate-800 p-4 hover:border-neonMagenta transition-all group flex flex-col justify-between">
             <div>
-                <span class="text-xs font-bold text-cyan-400 tracking-[.3em] uppercase">COMMUNICATION PIPELINE</span>
-                <h2 class="text-4xl font-black mt-2 mb-8">Initialize Interface</h2>
-                <div class="space-y-6 text-sm text-neutral-300">
-                    <div class="flex items-center gap-4">
-                        <span class="iconify text-cyan-400 text-xl" data-icon="lucide:mail"></span>
-                        <span>samiemtiaz38@gmail.com</span>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <span class="iconify text-pink-400 text-xl" data-icon="lucide:phone"></span>
-                        <span>+8801998453990</span>
-                    </div>
-                </div>
+                <div class="text-[10px] text-neonMagenta font-cyber">MISSION_02 // WEB</div>
+                <h3 class="text-base font-bold text-white mt-1 group-hover:text-neonMagenta transition-colors">Hotel System</h3>
+                <p class="text-xs text-slate-400 mt-2 font-light">Real-time terminal room reservation and execution logic rendering layouts cleanly.</p>
             </div>
-            <div class="glassmorphic-layer p-10 rounded-2xl bg-black/40 border border-neutral-900/60">
-                <form id="contactForm" class="space-y-6">
-                    <input type="text" placeholder="Sender Name" required class="w-full px-5 py-4 bg-neutral-950 border border-neutral-800 focus:border-cyan-500 rounded outline-none text-white text-sm transition-colors">
-                    <input type="email" placeholder="Transmission Email" required class="w-full px-5 py-4 bg-neutral-950 border border-neutral-800 focus:border-cyan-500 rounded outline-none text-white text-sm transition-colors">
-                    <textarea placeholder="Write message..." rows="4" required class="w-full px-5 py-4 bg-neutral-950 border border-neutral-800 focus:border-cyan-500 rounded outline-none text-white text-sm resize-none transition-colors"></textarea>
-                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-bold uppercase text-xs tracking-wider rounded-lg hover:brightness-110 transition-all">Deploy Connection</button>
-                </form>
+            <div class="mt-4 pt-3 border-t border-slate-900 flex justify-between text-xs font-cyber">
+                <a href="https://github.com/sami21-lgtm/Hotel-Management-system" target="_blank" class="text-slate-500 hover:text-white">REPO</a>
+                <a href="https://sami21-lgtm.github.io/Hotel-Management-system/" target="_blank" class="text-neonMagenta hover:underline">LIVE_LINK</a>
+            </div>
+        </div>
+
+        <!-- Mission Card 03 -->
+        <div class="bg-navyCard border border-slate-800 p-4 hover:border-neonCyan transition-all group flex flex-col justify-between">
+            <div>
+                <div class="text-[10px] text-neonCyan font-cyber">MISSION_03 // WEB</div>
+                <h3 class="text-base font-bold text-white mt-1 group-hover:text-neonCyan transition-colors">Hospital Control</h3>
+                <p class="text-xs text-slate-400 mt-2 font-light">Patient log structural database setups mapping operational healthcare trackers.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-900 text-right">
+                <a href="https://sami21-lgtm.github.io/modern-hospital-management-system/" target="_blank" class="text-xs text-neonCyan font-cyber hover:underline">LIVE_RUN -></a>
+            </div>
+        </div>
+
+        <!-- Mission Card 04 -->
+        <div class="bg-navyCard border border-slate-800 p-4 hover:border-white transition-all group flex flex-col justify-between">
+            <div>
+                <div class="text-[10px] text-slate-500 font-cyber">MISSION_04 // PORTAL</div>
+                <h3 class="text-base font-bold text-white mt-1 group-hover:text-neonCyan transition-colors">ADOR Portfolio</h3>
+                <p class="text-xs text-slate-400 mt-2 font-light">Interactive architectural layout nodes tracking unified portal integrations.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-900 text-right">
+                <a href="https://sami21-lgtm.github.io/ADOR-portfolio/" target="_blank" class="text-xs text-slate-300 font-cyber hover:underline">ACCESS_CORE -></a>
             </div>
         </div>
     </div>
 </section>
 
-<footer class="py-10 bg-black text-center text-xs text-neutral-600 border-t border-neutral-900">
-    <p>© 2026 MD. Emtiaz Hossain Sami. All operational nodes preserved safely[cite: 758].</p>
+<!-- Establish Communication Link (Contact Form) -->
+<section id="contact" class="py-12 max-w-6xl mx-auto px-4 relative z-10">
+    <div class="bg-black border-2 border-neonCyan/30 p-6 sm:p-8">
+        <div class="font-cyber text-xs text-neonCyan mb-4">// ESTABLISH_COMM_LINK</div>
+        <form id="contactForm" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+                <input type="text" placeholder="CALLSIGN / NAME" required class="w-full p-3 bg-navyCard border border-slate-800 focus:border-neonCyan text-white outline-none text-xs font-cyber">
+                <input type="email" placeholder="SECURE_EMAIL_ADDR" required class="w-full p-3 bg-navyCard border border-slate-800 focus:border-neonCyan text-white outline-none text-xs font-cyber">
+            </div>
+            <textarea placeholder="ENTER_ENCRYPTED_MESSAGE..." rows="4" required class="w-full p-3 bg-navyCard border border-slate-800 focus:border-neonCyan text-white outline-none text-xs"></textarea>
+            <button type="submit" class="w-full py-3 bg-neonCyan text-black font-cyber text-xs font-black tracking-widest hover:bg-neonMagenta hover:text-white transition-colors">
+                TRANSMIT_DATA_PACKET
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Data Stream Footer -->
+<footer class="py-8 text-center text-xs text-slate-600 border-t border-slate-900 relative z-10 font-cyber">
+    <p>© 2026 SAMI // ALL OPERATIONAL TERMINALS ARE PROTECTED.</p>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
