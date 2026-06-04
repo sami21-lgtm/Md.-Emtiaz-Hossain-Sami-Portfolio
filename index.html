@@ -75,8 +75,10 @@
             <div class="lg:col-span-4 flex flex-col items-center">
                 <div class="relative group cursor-crosshair">
                     <div class="absolute -inset-1 bg-gradient-to-r from-neonCyan via-neonViolet to-neonMagenta rounded-none blur opacity-40 group-hover:opacity-100 transition duration-500"></div>
-                    <div class="w-44 h-44 bg-black border-2 border-neonCyan p-1 relative z-10">
-                        <img src="about-photo.jpg.jpg" alt="Sami Profile" class="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-300">
+                    <!-- ফিক্সড স্কয়ার বক্স সাইজ এবং ফেস ফোকাস কভার -->
+                    <div class="w-48 h-48 bg-black border-2 border-neonCyan p-0 relative z-10 overflow-hidden flex items-center justify-center">
+                        <!-- অরিজিনাল কালারিং ফিরিয়ে আনা হয়েছে (grayscale রিমুভড) -->
+                        <img src="about-photo.jpg" alt="Sami Profile" class="absolute inset-0 w-full h-full object-cover object-center filter contrast-110 block">
                         <!-- Holographic Scanline Overlay -->
                         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-neonCyan/5 to-transparent bg-[length:100%_4px] pointer-events-none"></div>
                     </div>
@@ -99,7 +101,7 @@
             <!-- Identity Core Headers -->
             <div class="lg:col-span-8 text-center lg:text-left">
                 <span class="text-xs font-cyber tracking-[0.4em] text-neonMagenta font-bold block mb-2">// FRONT-END ARCHITECT ENGINEER</span>
-                <h1 class="text-3xl sm:text-5xl font-cyber font-black tracking-tighter uppercase text-white drop-shadow-[0_0_15px_rgba(0,240,255,0.4)]">
+                <h1 class="text-2xl sm:text-5xl font-cyber font-black tracking-tighter uppercase text-white drop-shadow-[0_0_15px_rgba(0,240,255,0.4)] break-words">
                     MD. EMTIAZ HOSSAIN SAMI
                 </h1>
                 
@@ -133,17 +135,17 @@
 
         <!-- Achievement Status Grid -->
         <div class="grid grid-cols-3 gap-2 sm:gap-6 text-center my-6 bg-black/40 p-4 border border-slate-800">
-            <div class="p-2">
-                <div class="text-2xl sm:text-3xl font-cyber font-bold text-neonCyan">01+</div>
-                <div class="text-[10px] uppercase text-slate-400 tracking-wider">YEARS_EXP</div>
+            <div>
+                <div class="text-xl sm:text-3xl font-cyber font-bold text-neonCyan">01+</div>
+                <div class="text-[9px] sm:text-[10px] uppercase text-slate-400 tracking-wider">YEARS_EXP</div>
             </div>
-            <div class="p-2 border-x border-slate-800">
-                <div class="text-2xl sm:text-3xl font-cyber font-bold text-neonViolet animate-pulse">70+</div>
-                <div class="text-[10px] uppercase text-slate-400 tracking-wider">COMPLETED_MISSIONS</div>
+            <div class="border-x border-slate-800">
+                <div class="text-xl sm:text-3xl font-cyber font-bold text-neonViolet animate-pulse">70+</div>
+                <div class="text-[9px] sm:text-[10px] uppercase text-slate-400 tracking-wider">MISSIONS</div>
             </div>
-            <div class="p-2">
-                <div class="text-2xl sm:text-3xl font-cyber font-bold text-white">12+</div>
-                <div class="text-[10px] uppercase text-slate-400 tracking-wider">TECH_STACK</div>
+            <div>
+                <div class="text-xl sm:text-3xl font-cyber font-bold text-white">12+</div>
+                <div class="text-[9px] sm:text-[10px] uppercase text-slate-400 tracking-wider">STACK</div>
             </div>
         </div>
 
@@ -164,7 +166,7 @@
     <div class="bg-navyCard border border-slate-800 p-6 sm:p-8 relative">
         <div class="border-b border-slate-800 pb-3 mb-4 flex items-center gap-2">
             <span class="iconify text-xl text-neonViolet" data-icon="lucide:terminal"></span>
-            <h2 class="text-lg font-cyber font-bold tracking-wider text-white">MISSION_LOG // ABOUT_SAMI</h2>
+            <h2 class="text-base sm:text-lg font-cyber font-bold tracking-wider text-white">MISSION_LOG // ABOUT_SAMI</h2>
         </div>
         <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
             <p>
@@ -180,24 +182,25 @@
 <!-- Algorithmic HUD Panel (Skills) -->
 <section id="my-skills" class="py-12 max-w-6xl mx-auto px-4 relative z-10">
     <div class="bg-navyCard border border-slate-800 p-6 sm:p-8">
+        <!-- মোবাইলে লেখা বাইরে যাওয়া টেক্সট রেস্পনসিভ ফিক্স (text-sm sm:text-lg) -->
         <div class="border-b border-slate-800 pb-3 mb-6">
-            <h2 class="text-lg font-cyber font-bold text-white tracking-widest">// SKILLS_&_ALGORITHMIC_HUD</h2>
+            <h2 class="text-sm sm:text-lg font-cyber font-bold text-white tracking-wider sm:tracking-widest">// SKILLS_&_ALGORITHMIC_HUD</h2>
         </div>
         
         <div class="grid md:grid-cols-2 gap-4 mb-6">
-            <a href="https://codeforces.com/profile/samiemtiaz008" target="_blank" class="p-4 bg-black border border-red-900/40 hover:border-red-500 transition-colors flex items-center justify-between group">
+            <a href="https://codeforces.com/profile/samiemtiaz008" target="_blank" class="p-4 bg-black border border-red-900/40 hover:border-red-500 transition-colors flex flex-wrap items-center justify-between gap-2 group">
                 <div class="flex items-center gap-3">
                     <span class="iconify text-2xl text-red-500" data-icon="simple-icons:codeforces"></span>
                     <span class="font-cyber text-xs tracking-wider group-hover:text-red-400">CODEFORCES_NODE</span>
                 </div>
-                <span class="text-xs text-slate-500 font-mono-tech">@samiemtiaz008</span>
+                <span class="text-[11px] text-slate-500 font-mono-tech">@samiemtiaz008</span>
             </a>
-            <a href="https://www.beecrowd.com.br/judge/en/profile/861747" target="_blank" class="p-4 bg-black border border-cyan-950/40 hover:border-neonCyan transition-colors flex items-center justify-between group">
+            <a href="https://www.beecrowd.com.br/judge/en/profile/861747" target="_blank" class="p-4 bg-black border border-cyan-950/40 hover:border-neonCyan transition-colors flex flex-wrap items-center justify-between gap-2 group">
                 <div class="flex items-center gap-3">
                     <span class="iconify text-2xl text-neonCyan" data-icon="lucide:code-2"></span>
                     <span class="font-cyber text-xs tracking-wider group-hover:text-neonCyan">BEECROWD_JUDGE</span>
                 </div>
-                <span class="text-xs text-slate-500 font-mono-tech">ACTIVE_SOLVER</span>
+                <span class="text-[11px] text-slate-500 font-mono-tech">ACTIVE_SOLVER</span>
             </a>
         </div>
 
@@ -219,10 +222,9 @@
 <section id="cv-node" class="py-12 max-w-6xl mx-auto px-4 relative z-10">
     <div class="grid lg:grid-cols-3 gap-6 items-start">
         <div class="bg-black/40 border border-slate-800 p-6 flex flex-col items-center justify-center text-center">
-           
-            <div class="w-40 h-52 bg-navyCard border border-slate-700 p-0 mb-4 relative overflow-hidden flex items-center justify-center">
-    <img src="Md.Emtiaz Hoosain Sami.jpg" alt="Formal Headshot" class="absolute inset-0 w-full h-full object-cover object-center filter contrast-110 block">
-</div>
+            <!-- ২য় ছবি ফুল কভার ফিক্স (absolute + inset-0 + w-full h-full + object-cover + p-0) -->
+            <div class="w-44 h-56 bg-navyCard border border-slate-700 p-0 mb-4 relative overflow-hidden flex items-center justify-center">
+                <img src="Md.Emtiaz Hoosain Sami.jpg" alt="Formal Headshot" class="absolute inset-0 w-full h-full object-cover object-center filter contrast-110 block">
             </div>
             <a href="Emtiaz_Sami (1) (2) (1).pdf" download class="w-full py-2 bg-neonCyan text-black font-cyber text-xs font-black tracking-widest text-center hover:bg-white transition-colors">
                 DOWNLOAD_CV.RAW
@@ -242,7 +244,6 @@
                     <div class="text-slate-300">Higher Secondary Certificate (HSC)</div>
                     <div class="text-slate-400 text-xs">Dhaka City College</div>
                 </div>
-                <!-- 🆕 ধনমণ্ডি সরকারি বালক উচ্চ বিদ্যালয় এখানে যোগ করা হয়েছে -->
                 <div>
                     <div class="text-slate-500 text-xs">[2013 — 2021]</div>
                     <div class="text-slate-300">Secondary School Certificate (SSC) & Primary</div>
