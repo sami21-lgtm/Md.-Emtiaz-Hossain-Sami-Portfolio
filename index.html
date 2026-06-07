@@ -1,377 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Md. Emtiaz Hossain Sami — Senior Software Architecture Portfolio</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<script>
-tailwind.config = {
-theme: {
-extend: {
-fontFamily: { 'inter': ['Inter', 'sans-serif'] },
-colors: {
-cyberDark: '#030102',
-cardDark: '#0a0609',
-neonCyan: '#00e5ff',
-neonPink: '#ff007f'
-}
-}
-}
-}
-</script>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Emtiaz Hossain Sami | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-cyberDark text-white font-inter overflow-x-hidden interface-system-mesh">
-<div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-gradient-to-br from-cyan-500/10 to-transparent blur-[120px] pointer-events-none custom-pulse-fast"></div>
-<div class="absolute top-[40%] right-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-pink-500/10 to-transparent blur-[150px] pointer-events-none custom-pulse-slow"></div>
-<nav class="fixed top-0 left-0 right-0 z-50 bg-black/75 backdrop-blur-xl border-b border-neutral-900/80">
-<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="h-11 w-auto overflow-hidden">
-<img src="Md. EmTIAZ hOSSAIN sAMI LOGO.png" alt="Sami Official Logo" class="h-full object-contain">
-</div>
-</div>
-<div class="hidden md:flex items-center gap-8 text-xs font-bold tracking-[0.2em] text-neutral-400">
-<a href="#home" class="hover:text-cyan-400 transition-colors">DASHBOARD</a>
-<a href="#about-section" class="hover:text-cyan-400 transition-colors">ABOUT</a>
-<a href="#my-skills" class="hover:text-cyan-400 transition-colors">SKILLS HUD</a>
-<a href="#cv-node" class="hover:text-cyan-400 transition-colors">CREDENTIALS</a>
-<a href="#projects" class="hover:text-cyan-400 transition-colors">PRODUCTIONS</a>
-<a href="#contact" class="hover:text-cyan-400 transition-colors">CONTACT</a>
-</div>
-<a href="mailto:samiemtiaz38@gmail.com" class="px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-black tracking-widest uppercase rounded-lg hover:brightness-125 transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)]">Mail Terminal</a>
-</div>
-</nav>
-<main id="home" class="min-h-screen pt-28 pb-16 flex flex-col items-center justify-center max-w-6xl mx-auto px-4 gap-12">
+<body>
 
-<div class="w-full relative rounded-3xl overflow-hidden border border-neutral-900/60 shadow-2xl bg-gradient-to-b from-neutral-950 via-cardDark to-black p-8 sm:p-14 relative group">
+    <!-- Header / Navbar -->
+    <header id="header" class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">SAMI<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+            <div class="nav-actions">
+                <!-- Dark / Light Mode Button -->
+                <button id="theme-toggle" class="theme-toggle-btn">
+                    <span class="iconify" data-icon="lucide:sun" id="theme-icon"></span>
+                </button>
+                <a href="#contact" class="btn-primary">Contact Me</a>
+            </div>
+        </div>
+    </header>
 
-<div class="flex flex-col items-center border-b border-neutral-900 pb-10 mb-10 relative z-10">
-<div class="relative mb-6">
-<div class="absolute inset-0 bg-gradient-to-tr from-cyan-400 via-purple-500 to-pink-500 rounded-full blur opacity-60 animate-spin-slow"></div>
-<div class="w-36 h-36 rounded-full overflow-hidden border-2 border-neutral-950 relative z-10">
-<img src="about-photo.jpg.jpg" alt="Sami Profile" class="w-full h-full object-cover">
-</div>
-</div>
-<h1 class="text-4xl sm:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500 uppercase text-center drop-shadow-sm">
-MD. EMTIAZ HOSSAIN SAMI
-</h1>
-<p class="text-xs sm:text-sm font-bold tracking-[0.5em] text-neutral-400 uppercase mt-4 text-center border-y border-neutral-900/60 py-2 px-4">
-Software Engineering Student & Front-End Architecture Engineer
-</p>
-<div class="flex flex-wrap justify-center gap-4 mt-8">
-<a href="https://www.facebook.com/emtiaz.hossain.2478" target="_blank" class="p-3 bg-neutral-900/50 border border-neutral-800 rounded-xl text-neutral-400 hover:text-blue-500 hover:border-blue-600/50 hover:bg-blue-950/10 transition-all transform hover:-translate-y-1">
-<span class="iconify text-2xl" data-icon="simple-icons:facebook"></span>
-</a>
-<a href="https://www.linkedin.com/in/emtiaz-hossain-6b4416340/" target="_blank" class="p-3 bg-neutral-900/50 border border-neutral-800 rounded-xl text-neutral-400 hover:text-cyan-400 hover:border-cyan-500/50 hover:bg-cyan-950/10 transition-all transform hover:-translate-y-1">
-<span class="iconify text-2xl" data-icon="simple-icons:linkedin"></span>
-</a>
-<a href="https://github.com/sami21-lgtm" target="_blank" class="p-3 bg-neutral-900/50 border border-neutral-800 rounded-xl text-neutral-400 hover:text-white hover:border-neutral-700 hover:bg-neutral-800/20 transition-all transform hover:-translate-y-1">
-<span class="iconify text-2xl" data-icon="simple-icons:github"></span>
-</a>
-<a href="https://instagram.com/" target="_blank" class="p-3 bg-neutral-900/50 border border-neutral-800 rounded-xl text-neutral-400 hover:text-pink-500 hover:border-pink-500/50 hover:bg-pink-950/10 transition-all transform hover:-translate-y-1">
-<span class="iconify text-2xl" data-icon="simple-icons:instagram"></span>
-</a>
-<a href="https://x.com/" target="_blank" class="p-3 bg-neutral-900/50 border border-neutral-800 rounded-xl text-neutral-400 hover:text-white hover:border-neutral-700 transition-all transform hover:-translate-y-1">
-<span class="iconify text-2xl" data-icon="simple-icons:x"></span>
-</a>
-</div>
-</div>
-<div class="grid sm:grid-cols-3 gap-12 items-center bg-neutral-950/40 backdrop-blur-md p-10 rounded-2xl border border-neutral-900/80 relative z-10">
-<div class="flex flex-col items-center">
-<span class="text-cyan-400 font-black tracking-widest text-xs uppercase mb-4">ENJOY METER</span>
-<div class="w-12 bg-neutral-900 h-40 rounded-t relative overflow-hidden flex items-end">
-<div class="w-full bg-gradient-to-t from-cyan-600 to-cyan-400 h-[72%]"></div>
-</div>
-<div class="mt-4 flex items-center justify-center w-14 h-14 rounded-full border-4 border-cyan-400 text-xs font-black text-cyan-400">72%</div>
-</div>
-<div class="space-y-4 font-semibold text-neutral-400 py-2 text-xs sm:text-sm">
-<div class="flex items-center gap-4 group/item">
-<span class="iconify text-cyan-400 text-xl group-hover/item:scale-110 transition-transform" data-icon="lucide:check-circle"></span>
-<span class="group-hover/item:text-neutral-200 transition-colors">Pace decreasing</span>
-</div>
-<div class="flex items-center gap-4 group/item">
-<span class="iconify text-purple-400 text-xl group-hover/item:scale-110 transition-transform" data-icon="lucide:check-circle"></span>
-<span class="group-hover/item:text-neutral-200 transition-colors">Acting very natural</span>
-</div>
-<div class="flex items-center gap-4 group/item">
-<span class="iconify text-pink-400 text-xl group-hover/item:scale-110 transition-transform" data-icon="lucide:check-circle"></span>
-<span class="group-hover/item:text-neutral-200 transition-colors">Cinematography top notch</span>
-</div>
-<div class="flex items-center gap-4 group/item">
-<span class="iconify text-cyan-400 text-xl group-hover/item:scale-110 transition-transform" data-icon="lucide:check-circle"></span>
-<span class="group-hover/item:text-neutral-200 transition-colors">Enjoyable BGM</span>
-</div>
-</div>
-<div class="flex flex-col items-center">
-<span class="text-pink-500 font-black tracking-widest text-xs uppercase mb-4">CLASS METER</span>
-<div class="w-12 bg-neutral-900 h-40 rounded-t relative overflow-hidden flex items-end">
-<div class="w-full bg-gradient-to-t from-pink-600 to-pink-500 h-[82%]"></div>
-</div>
-<div class="mt-4 flex items-center justify-center w-14 h-14 rounded-full border-4 border-pink-500 text-xs font-black text-pink-500">82%</div>
-</div>
-</div>
-<div class="grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto my-12 border-y border-neutral-900 py-6 text-center relative z-10">
-<div>
-<div class="text-3xl sm:text-4xl font-black text-white">1+</div>
-<div class="text-xs uppercase font-bold tracking-widest text-neutral-500 mt-1">Years Experience</div>
-</div>
-<div class="border-x border-neutral-900">
-<div class="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-400 animate-pulse">70+</div>
-<div class="text-xs uppercase font-bold tracking-widest text-neutral-500 mt-1">Projects Done</div>
-</div>
-<div>
-<div class="text-3xl sm:text-4xl font-black text-white">12+</div>
-<div class="text-xs uppercase font-bold tracking-widest text-neutral-500 mt-1">Technologies</div>
-</div>
-</div>
-<div class="flex flex-wrap justify-center gap-6 relative z-10">
-<a href="#projects" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-pink-500 hover:to-purple-600 text-white font-bold rounded-lg text-xs tracking-widest uppercase shadow-xl transition-all duration-300">View Project Repos</a>
-<a href="https://sami21-lgtm.github.io/Own-portal/" target="_blank" class="px-8 py-4 border border-neutral-800 text-neutral-400 font-semibold rounded-lg text-xs tracking-widest uppercase hover:border-cyan-400 hover:text-white transition-all">Own Portal URL</a>
-</div>
-</div>
-</main>
-<section id="about-section" class="py-16 border-t border-neutral-900/80">
-<div class="max-w-6xl mx-auto px-4">
-<div class="glassmorphic-layer p-10 rounded-3xl border border-neutral-900 space-y-6">
-<div class="border-b border-neutral-900 pb-4">
-<span class="text-xs font-bold text-cyan-400 tracking-[0.3em] uppercase">IDENTITY DEPLOYMENT</span>
-<h2 class="text-3xl font-black mt-1">About Me</h2>
-</div>
-<p class="text-base sm:text-lg text-neutral-300 leading-relaxed font-light">
-I am <strong class="text-white">MD. Emtiaz Hossain Sami</strong>, a Software Engineering student at <span class="text-white">Daffodil International University</span> with a passion for building functional and aesthetic digital experiences.
-As a front-end developer, I specialize in <span class="text-cyan-400 font-semibold">Glassmorphism design</span> and responsive web interfaces.
-</p>
-<p class="text-base sm:text-lg text-neutral-300 leading-relaxed font-light">
-Beyond the screen, I am a dedicated robotics enthusiast, having successfully developed hardware prototypes like a <span class="text-purple-400 font-semibold">Human Following Robot</span>.
-I balance my technical pursuits with a commitment to fitness and bodybuilding, always striving for growth in both code and life.
-</p>
-</div>
-</div>
-</section>
-<section id="my-skills" class="py-20 bg-neutral-950/20 border-t border-neutral-900/80">
-<div class="max-w-6xl mx-auto px-4">
-<div class="glassmorphic-layer p-10 rounded-3xl border border-neutral-900 space-y-8">
-<div class="border-b border-neutral-900 pb-4">
-<span class="text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-400 tracking-[0.3em] uppercase">ALGORITHMIC HUD</span>
-<h2 class="text-3xl font-black mt-1">My Skills & Programming Hub</h2>
-</div>
-<div class="grid md:grid-cols-2 gap-6">
-<a href="https://codeforces.com/profile/samiemtiaz008" target="_blank" class="app-matrix-element p-6 rounded-2xl flex items-center justify-between group">
-<div class="flex items-center gap-4">
-<span class="iconify text-3xl text-red-500 animate-pulse" data-icon="simple-icons:codeforces"></span>
-<div>
-<h4 class="text-base font-bold text-white group-hover:text-cyan-400 transition-colors">Codeforces Profile</h4>
-<p class="text-xs text-neutral-500 font-mono">@samiemtiaz008</p>
-</div>
-</div>
-<span class="iconify text-xl text-neutral-600 group-hover:text-white transition-all transform group-hover:translate-x-1" data-icon="lucide:arrow-right"></span>
-</a>
-<a href="https://www.beecrowd.com.br/judge/en/profile/861747" target="_blank" class="app-matrix-element p-6 rounded-2xl flex items-center justify-between group">
-<div class="flex items-center gap-4">
-<span class="iconify text-3xl text-cyan-400" data-icon="lucide:code-2"></span>
-<div>
-<h4 class="text-base font-bold text-white group-hover:text-pink-500 transition-colors">Beecrowd Judge</h4>
-<p class="text-xs text-neutral-500 font-mono">Problem Solving Framework</p>
-</div>
-</div>
-<span class="iconify text-xl text-neutral-600 group-hover:text-white transition-all transform group-hover:translate-x-1" data-icon="lucide:arrow-right"></span>
-</a>
-</div>
-<div class="pt-4">
-<h3 class="text-xs font-bold text-neutral-400 tracking-widest uppercase mb-4 flex items-center gap-2">
-<span class="iconify text-cyan-400" data-icon="lucide:cpu"></span> Mapped Stack Technologies:
-</h3>
-<div class="flex flex-wrap gap-3">
-<span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-neutral-300 font-medium rounded-lg hover:border-cyan-500 transition-colors">C++ Programming</span>
-<span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-cyan-400 font-medium rounded-lg hover:border-cyan-500 transition-colors">Web Development</span>
-<span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-neutral-300 font-medium rounded-lg hover:border-cyan-500 transition-colors">C Language Architecture</span>
-<span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-neutral-300 font-medium rounded-lg hover:border-cyan-500 transition-colors">HTML & CSS Grid</span>
-<span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-purple-400 font-medium rounded-lg hover:border-cyan-500 transition-colors">UI/UX Design (Figma)</span>
-<span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-neutral-300 font-medium rounded-lg hover:border-cyan-500 transition-colors">GitHub Infrastructure</span>
-<span class="px-4 py-2 bg-neutral-900/60 border border-neutral-800 text-xs text-pink-400 font-medium rounded-lg hover:border-cyan-500 transition-colors">Robotics Prototypes</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="cv-node" class="py-24 bg-gradient-to-b from-cyberDark to-black border-t border-neutral-900/80">
-<div class="max-w-6xl mx-auto px-4">
-<div class="mb-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 text-center sm:text-left border-b border-neutral-900 pb-8">
-<div>
-<span class="text-xs font-bold text-pink-500 tracking-[.3em] uppercase">VERIFIED ACCESS NODE</span>
-<h2 class="text-3xl font-black mt-1">Curriculum Vitae Repository</h2>
-</div>
-<div class="flex justify-center">
-<a href="Emtiaz_Sami (1) (2) (1).pdf" download="Md_Emtiaz_Hossain_Sami_CV.pdf" class="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-pink-500 text-white text-xs font-black tracking-widest uppercase rounded-xl hover:scale-105 shadow-xl transition-all transform duration-300">
-<span class="iconify text-xl" data-icon="lucide:download-cloud"></span>
-Download CV PDF
-</a>
-</div>
-</div>
-<div class="grid lg:grid-cols-12 gap-12 items-start">
-<div class="lg:col-span-4 flex flex-col items-center">
-<div class="relative w-full max-w-[260px] aspect-[3/4] rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 shadow-2xl">
-<img src="Md.Emtiaz Hoosain Sami.jpg" alt="Formal Photo" class="w-full h-full object-cover">
-<div class="absolute inset-0 bg-gradient-to-t from-cyberDark via-transparent to-transparent"></div>
-</div>
-</div>
-<div class="lg:col-span-8 space-y-8">
-<div class="glassmorphic-layer p-8 rounded-2xl border border-neutral-900">
-<h3 class="text-xs font-bold tracking-widest text-cyan-400 uppercase mb-6 flex items-center gap-2">
-<span class="iconify text-lg" data-icon="lucide:graduation-cap"></span> Academic Chronology
-</h3>
-<div class="space-y-6 border-l-2 border-neutral-900 pl-6 ml-2">
-<div class="relative">
-<span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(6,182,212,1)]"></span>
-<div class="flex justify-between text-xs font-mono text-neutral-500 mb-1">
-<span>Daffodil International University (DIU)</span>
-<span>2024 — 2028</span>
-</div>
-<h4 class="text-base font-bold text-white">Bachelor's in Software Engineering</h4>
-</div>
-<div class="relative">
-<span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-neutral-700"></span>
-<div class="flex justify-between text-xs font-mono text-neutral-500 mb-1">
-<span>Dhaka City College</span>
-<span>2022 — 2023</span>
-</div>
-<h4 class="text-base font-semibold text-neutral-300">Higher Secondary Certificate (HSC)</h4>
-</div>
-<div class="relative">
-<span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-neutral-700"></span>
-<div class="flex justify-between text-xs font-mono text-neutral-500 mb-1">
-<span>Dhanmondi Govt. Boy's High School</span>
-<span>2013 — 2021</span>
-</div>
-<h4 class="text-base font-semibold text-neutral-300">Secondary School Certificate (SSC)</h4>
-</div>
-</div>
-</div>
-<div class="glassmorphic-layer p-8 rounded-2xl border border-neutral-900 space-y-4">
-<h3 class="text-xs font-bold tracking-widest text-pink-500 uppercase flex items-center gap-2">
-<span class="iconify text-lg" data-icon="lucide:award"></span> Verified Core Credentials
-</h3>
-<ul class="text-xs sm:text-sm text-neutral-400 space-y-4">
-<li class="flex flex-wrap items-center justify-between gap-3 border-b border-neutral-900/40 pb-3">
-<span><strong class="text-white">Foundation Of Cybersecurity</strong> (Coursera - 2026)</span>
-<a href="https://www.coursera.org/account/accomplishments/certificate/WARAL2XWLWDR" target="_blank" class="text-cyan-400 hover:underline flex items-center gap-0.5 font-mono">Verify <span class="iconify" data-icon="lucide:external-link"></span></a>
-</li>
-<li class="flex flex-wrap items-center justify-between gap-3 border-b border-neutral-900/40 pb-3">
-<span><strong class="text-white">Operating Systems: Becoming a Power User</strong> (Coursera)</span>
-<a href="https://www.coursera.org/account/accomplishments/certificate/X9G02061Q3QL" target="_blank" class="text-cyan-400 hover:underline flex items-center gap-0.5 font-mono">Verify <span class="iconify" data-icon="lucide:external-link"></span></a>
-</li>
-<li class="flex flex-wrap items-center justify-between gap-3">
-<span><strong class="text-white">C Programming Language Layer</strong> (10 Minute School)</span>
-<a href="https://10minuteschool.com/certificate/6874c04fcc117" target="_blank" class="text-cyan-400 hover:underline flex items-center gap-0.5 font-mono">Verify <span class="iconify" data-icon="lucide:external-link"></span></a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="projects" class="py-24 bg-black/40 border-t border-neutral-900/80">
-<div class="max-w-7xl mx-auto px-6">
-<div class="mb-14">
-<span class="text-xs font-bold text-cyan-400 tracking-[.3em] uppercase">PRODUCTION MATRIX</span>
-<h2 class="text-4xl font-black mt-2">Verified Framework Deployments</h2>
-</div>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="app-matrix-element glassmorphic-layer p-8 rounded-xl flex flex-col justify-between h-72">
-<div>
-<span class="text-xs font-bold text-pink-500 uppercase tracking-widest">Web Application</span>
-<h3 class="text-xl font-bold mt-1 text-white">Hostel Management</h3>
-<p class="text-neutral-400 text-xs mt-3 font-light leading-relaxed">Allocation logic, management routines and data layouts engineered cleanly.</p>
-</div>
-<div class="flex justify-between items-center mt-6">
-<span class="text-xs font-mono text-neutral-600">REPOSITORY CONFIG</span>
-<a href="https://github.com/sami21-lgtm/Hostel-Management-System" target="_blank" class="text-xs font-bold text-cyan-400 hover:underline flex items-center gap-1">Source Link <span class="iconify" data-icon="lucide:external-link"></span></a>
-</div>
-</div>
-<div class="app-matrix-element glassmorphic-layer p-8 rounded-xl flex flex-col justify-between h-72">
-<div>
-<span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">Web Application</span>
-<h3 class="text-xl font-bold mt-1 text-white">Hotel Management</h3>
-<p class="text-neutral-400 text-xs mt-3 font-light leading-relaxed">Interactive alive reservation room console rendering dashboard layout.</p>
-</div>
-<div class="flex justify-between items-center mt-6">
-<a href="https://github.com/sami21-lgtm/Hotel-Management-system" target="_blank" class="text-xs text-neutral-500 underline">Source Grid</a>
-<a href="https://sami21-lgtm.github.io/Hotel-Management-system/" target="_blank" class="text-xs font-bold text-pink-500 hover:underline flex items-center gap-1">Live Deployment <span class="iconify" data-icon="lucide:play"></span></a>
-</div>
-</div>
-<div class="app-matrix-element glassmorphic-layer p-8 rounded-xl flex flex-col justify-between h-72">
-<div>
-<span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Web Application</span>
-<h3 class="text-xl font-bold mt-1 text-white">Modern Hospital Setup</h3>
-<p class="text-neutral-400 text-xs mt-3 font-light leading-relaxed">Patient registry core data architectures tracking logic environment.</p>
-</div>
-<div class="flex justify-between items-center mt-6">
-<span class="text-xs font-mono text-neutral-600">HEALTH ENVIRONMENT</span>
-<a href="https://sami21-lgtm.github.io/modern-hospital-management-system/" target="_blank" class="text-xs font-bold text-cyan-400 hover:underline flex items-center gap-1">Live Deployment <span class="iconify" data-icon="lucide:external-link"></span></a>
-</div>
-</div>
-<div class="app-matrix-element glassmorphic-layer p-8 rounded-xl flex flex-col justify-between h-72">
-<div>
-<span class="text-xs font-bold text-cyan-400 uppercase tracking-widest">Web Portfolio</span>
-<h3 class="text-xl font-bold mt-1 text-white">ADOR Portfolio</h3>
-<p class="text-neutral-400 text-xs mt-3 font-light leading-relaxed">Premium framework deployment and advanced interactive portfolio interface.</p>
-</div>
-<div class="flex justify-between items-center mt-6">
-<span class="text-xs font-mono text-neutral-600">PORTFOLIO MATRIX</span>
-<a href="https://sami21-lgtm.github.io/ADOR-portfolio/" target="_blank" class="text-xs font-bold text-pink-500 hover:underline flex items-center gap-1">Live Deployment <span class="iconify" data-icon="lucide:play"></span></a>
-</div>
-</div>
-<div class="app-matrix-element glassmorphic-layer p-8 rounded-xl flex flex-col justify-between h-72">
-<div>
-<span class="text-xs font-bold text-orange-400 uppercase tracking-widest">Web Application</span>
-<h3 class="text-xl font-bold mt-1 text-white">Vee's Restaurant</h3>
-<p class="text-neutral-400 text-xs mt-3 font-light leading-relaxed">Interactive restaurant interface and menu showcasing modern culinary digital presence.</p>
-</div>
-<div class="flex justify-between items-center mt-6">
-<span class="text-xs font-mono text-neutral-600">CULINARY DEPLOYMENT</span>
-<a href="https://sami21-lgtm.github.io/Vee-s-Restaurant/" target="_blank" class="text-xs font-bold text-orange-400 hover:underline flex items-center gap-1">Live Deployment <span class="iconify" data-icon="lucide:play"></span></a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="contact" class="py-24 border-t border-neutral-900/80">
-<div class="max-w-7xl mx-auto px-6">
-<div class="grid lg:grid-cols-2 gap-16">
-<div>
-<span class="text-xs font-bold text-cyan-400 tracking-[.3em] uppercase">COMMUNICATION PIPELINE</span>
-<h2 class="text-4xl font-black mt-2 mb-8">Initialize Interface</h2>
-<div class="space-y-6 text-sm text-neutral-300">
-<div class="flex items-center gap-4">
-<span class="iconify text-cyan-400 text-xl" data-icon="lucide:mail"></span>
-<span>samiemtiaz38@gmail.com</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="iconify text-pink-400 text-xl" data-icon="lucide:phone"></span>
-<span>+8801998453990</span>
-</div>
-</div>
-</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h4 class="greeting">Welcome to my digital space</h4>
+            <h1 class="title">Hi, I'm <br><span class="text-gradient">Md. Emtiaz Hossain Sami</span></h1>
+            <p class="subtitle">
+                Software Engineering student at Daffodil International University. Specializing in Front-End Architecture, Glassmorphism design, and Object-Oriented Programming.
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn-secondary">View Work</a>
+                <a href="https://github.com/sami21-lgtm" target="_blank" class="social-icon"><span class="iconify" data-icon="lucide:github"></span></a>
+                <a href="https://codeforces.com/profile/samiemtiaz008" target="_blank" class="social-icon"><span class="iconify" data-icon="simple-icons:codeforces"></span></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-glass-wrapper">
+                <img src="https://github.com/sami21-lgtm.png" alt="Md. Emtiaz Hossain Sami">
+            </div>
+        </div>
+    </section>
 
-<div class="glassmorphic-layer p-10 rounded-2xl bg-black/40 border border-neutral-900/60">
-<form id="contactForm" class="space-y-6">
-<input type="text" placeholder="Sender Name" required class="w-full px-5 py-4 bg-neutral-950 border border-neutral-800 focus:border-cyan-500 rounded outline-none text-white text-sm transition-colors">
-<input type="email" placeholder="Transmission Email" required class="w-full px-5 py-4 bg-neutral-950 border border-neutral-800 focus:border-cyan-500 rounded outline-none text-white text-sm transition-colors">
-<textarea placeholder="Write message..." rows="4" required class="w-full px-5 py-4 bg-neutral-950 border border-neutral-800 focus:border-cyan-500 rounded outline-none text-white text-sm resize-none transition-colors"></textarea>
-<button type="submit" class="w-full py-4 bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-bold uppercase text-xs tracking-wider rounded-lg hover:brightness-110 transition-all">Deploy Connection</button>
-</form>
-</div>
-</div>
-</div>
-</section>
-<footer class="py-10 bg-black text-center text-xs text-neutral-600 border-t border-neutral-900">
-<p>developed by Md. Emtiaz Hossain Sami 2026. All operational nodes preserved safely.</p>
-</footer>
-<script src="script.js"></script>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="glass-card about-card">
+            <h2><span class="iconify" data-icon="lucide:user"></span> About Me & Skills</h2>
+            <p>
+                I am a 22-year-old passionate software developer currently pursuing my B.Sc. in Software Engineering. I love translating complex algorithmic logic into seamless, user-friendly digital interfaces. 
+            </p>
+            <div class="skills-container">
+                <span class="skill-tag">C / C++ / Java</span>
+                <span class="skill-tag">OOP & Algorithms</span>
+                <span class="skill-tag">HTML / CSS / JS</span>
+                <span class="skill-tag">Glassmorphism UI</span>
+                <span class="skill-tag">Robotics (Arduino)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p>My recent developments and interactive frameworks.</p>
+        </div>
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="glass-card project-card">
+                <span class="iconify project-icon" data-icon="lucide:building"></span>
+                <h3>Hostel Management</h3>
+                <p>Clean data layouts and allocation routines engineered for efficient student living management.</p>
+                <a href="https://github.com/sami21-lgtm/Hostel-Management-System" target="_blank" class="project-link">Source Code <span class="iconify" data-icon="lucide:arrow-right"></span></a>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="glass-card project-card">
+                <span class="iconify project-icon" data-icon="lucide:hotel"></span>
+                <h3>Hotel Management</h3>
+                <p>Interactive live reservation room console rendering an intuitive dashboard layout.</p>
+                <a href="https://sami21-lgtm.github.io/Hotel-Management-system/" target="_blank" class="project-link">Live Preview <span class="iconify" data-icon="lucide:arrow-right"></span></a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="glass-card project-card">
+                <span class="iconify project-icon" data-icon="lucide:activity"></span>
+                <h3>Modern Hospital Setup</h3>
+                <p>Patient registry and core data architecture for tracking dynamic health environments.</p>
+                <a href="https://sami21-lgtm.github.io/modern-hospital-management-system/" target="_blank" class="project-link">Live Preview <span class="iconify" data-icon="lucide:arrow-right"></span></a>
+            </div>
+
+            <!-- Project 4 (ADOR Portfolio) -->
+            <div class="glass-card project-card">
+                <span class="iconify project-icon" data-icon="lucide:layout"></span>
+                <h3>ADOR Portfolio</h3>
+                <p>Premium framework deployment and advanced interactive portfolio interface design.</p>
+                <a href="https://sami21-lgtm.github.io/ADOR-portfolio/" target="_blank" class="project-link">Live Preview <span class="iconify" data-icon="lucide:arrow-right"></span></a>
+            </div>
+
+            <!-- Project 5 (Vee's Restaurant) -->
+            <div class="glass-card project-card">
+                <span class="iconify project-icon" data-icon="lucide:utensils"></span>
+                <h3>Vee's Restaurant</h3>
+                <p>Interactive restaurant interface and menu showcasing a modern culinary digital presence.</p>
+                <a href="https://sami21-lgtm.github.io/Vee-s-Restaurant/" target="_blank" class="project-link">Live Preview <span class="iconify" data-icon="lucide:arrow-right"></span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h2>Let's Build Something Great</h2>
+            <a href="mailto:samiemtiaz38@gmail.com" class="email-link">samiemtiaz38@gmail.com</a>
+            <p class="copyright">developed by Md. Emtiaz Hossain Sami 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
