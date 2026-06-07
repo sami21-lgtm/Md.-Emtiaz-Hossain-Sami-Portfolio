@@ -6,7 +6,7 @@
     <title>Md. Emtiaz Hossain Sami — Engineering Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -14,7 +14,8 @@
             theme: {
                 extend: {
                     fontFamily: { 
-                        'inter': ['Inter', 'sans-serif']
+                        'inter': ['Inter', 'sans-serif'],
+                        'siliguri': ['Hind Siliguri', 'sans-serif']
                     },
                     colors: {
                         beigeCustom: '#efe7da',
@@ -191,7 +192,7 @@
     </div>
 </section>
  
-<!-- Projects Matrix Section -->
+<!-- Projects Matrix Section (6 Projects Displayed) -->
 <section id="projects" class="py-24 border-t border-neutral-300 dark:border-neutral-900 theme-transition">
     <div class="max-w-7xl mx-auto px-6">
         <div class="mb-12">
@@ -221,12 +222,25 @@
                     <p class="text-neutral-500 text-xs mt-2 font-light">Interactive alive reservation room console rendering dashboard layout.</p>
                 </div>
                 <div class="flex justify-between items-center mt-4">
-                    <a href="https://github.com/sami21-lgtm/Hotel-Management-system" target="_blank" class="text-xs text-neutral-500 underline">Source Grid</a>
-                    <a href="https://sami21-lgtm.github.io/Hotel-Management-system/" target="_blank" class="text-xs font-bold text-neutral-900 dark:text-accentRed hover:underline flex items-center gap-1">Live Deployment <span class="iconify" data-icon="lucide:play"></span></a>
+                    <span class="text-[10px] font-mono text-neutral-400">SOURCE REPO</span>
+                    <a href="https://github.com/sami21-lgtm/Hotel-Management-system" target="_blank" class="text-xs font-bold text-neutral-900 dark:text-accentRed hover:underline flex items-center gap-1">Source Grid <span class="iconify" data-icon="lucide:external-link"></span></a>
                 </div>
             </div>
  
             <!-- Project 3 -->
+            <div class="p-6 rounded-xl border border-neutral-300 dark:border-neutral-900 bg-white/50 dark:bg-neutral-950/40 flex flex-col justify-between h-64 theme-transition">
+                <div>
+                    <span class="text-xs font-bold text-neutral-500 dark:text-accentRed uppercase tracking-widest">Web Application</span>
+                    <h3 class="text-xl font-bold mt-1 text-neutral-900 dark:text-white">Hotel Live Deploy</h3>
+                    <p class="text-neutral-500 text-xs mt-2 font-light">Live application environment deployment console tracking client inputs.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-[10px] font-mono text-neutral-400">LIVE BUILD</span>
+                    <a href="https://sami21-lgtm.github.io/Hotel-Management-system/" target="_blank" class="text-xs font-bold text-neutral-900 dark:text-accentRed hover:underline flex items-center gap-1">Live Deployment <span class="iconify" data-icon="lucide:play"></span></a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
             <div class="p-6 rounded-xl border border-neutral-300 dark:border-neutral-900 bg-white/50 dark:bg-neutral-950/40 flex flex-col justify-between h-64 theme-transition">
                 <div>
                     <span class="text-xs font-bold text-neutral-500 dark:text-accentRed uppercase tracking-widest">Web Application</span>
@@ -236,6 +250,32 @@
                 <div class="flex justify-between items-center mt-4">
                     <span class="text-[10px] font-mono text-neutral-400">HEALTH ENVIRONMENT</span>
                     <a href="https://sami21-lgtm.github.io/modern-hospital-management-system/" target="_blank" class="text-xs font-bold text-neutral-900 dark:text-accentRed hover:underline flex items-center gap-1">Live Deployment <span class="iconify" data-icon="lucide:external-link"></span></a>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="p-6 rounded-xl border border-neutral-300 dark:border-neutral-900 bg-white/50 dark:bg-neutral-950/40 flex flex-col justify-between h-64 theme-transition">
+                <div>
+                    <span class="text-xs font-bold text-neutral-500 dark:text-accentRed uppercase tracking-widest">Academic Tool</span>
+                    <h3 class="text-xl font-bold mt-1 text-neutral-900 dark:text-white">Report Page Generator</h3>
+                    <p class="text-neutral-500 text-xs mt-2 font-light">Custom automated script architecture engine tailored for university cover sheet schemas.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-[10px] font-mono text-neutral-400">DIU FRAMEWORK</span>
+                    <a href="https://github.com/sami21-lgtm" target="_blank" class="text-xs font-bold text-neutral-900 dark:text-accentRed hover:underline flex items-center gap-1">View Hub <span class="iconify" data-icon="lucide:external-link"></span></a>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="p-6 rounded-xl border border-neutral-300 dark:border-neutral-900 bg-white/50 dark:bg-neutral-950/40 flex flex-col justify-between h-64 theme-transition">
+                <div>
+                    <span class="text-xs font-bold text-neutral-500 dark:text-accentRed uppercase tracking-widest">Robotics / Hardware</span>
+                    <h3 class="text-xl font-bold mt-1 text-neutral-900 dark:text-white">Human Following Robot</h3>
+                    <p class="text-neutral-500 text-xs mt-2 font-light">Smart hardware integration parsing sonar distance tracking arrays via microcontrollers.</p>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-[10px] font-mono text-neutral-400">EMBEDDED NODES</span>
+                    <a href="https://github.com/sami21-lgtm" target="_blank" class="text-xs font-bold text-neutral-900 dark:text-accentRed hover:underline flex items-center gap-1">Specifications <span class="iconify" data-icon="lucide:cpu"></span></a>
                 </div>
             </div>
         </div>
@@ -288,7 +328,7 @@
  
 <!-- Footer -->
 <footer class="py-8 bg-neutral-200 dark:bg-black text-center text-xs text-neutral-500 border-t border-neutral-300 dark:border-neutral-900 theme-transition">
-    <p>© 2026 MD. Emtiaz Hossain Sami. All right matrix nodes preserved safely.</p>
+    <p>developed by Md. Emtiaz Hossain Sami 2026. All right matrix nodes preserved safely.</p>
 </footer>
  
 <script>
