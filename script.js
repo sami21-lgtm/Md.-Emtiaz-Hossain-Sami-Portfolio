@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Sticky Header Effect ---
+    // --- Sticky Header ---
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -10,15 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Dark / Light Mode Toggle ---
+    // --- Light / Dark Mode Toggle ---
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
 
     themeToggleBtn.addEventListener('click', () => {
-        // Toggle the 'light-mode' class on the body
         document.body.classList.toggle('light-mode');
         
-        // Change the icon based on the active mode
         if (document.body.classList.contains('light-mode')) {
             themeIcon.setAttribute('data-icon', 'lucide:moon');
         } else {
@@ -26,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Scroll Animations ---
+    // --- Smooth Reveal Animation on Scroll ---
     const cards = document.querySelectorAll('.glass-card');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
